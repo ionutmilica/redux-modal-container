@@ -1,0 +1,6 @@
+.idea
+dist
+lib
+es
+node_modules
+.DS_Store

@@ -1,0 +1,7 @@
+.idea
+config
+.babelrc
+.eslintrc.js
+.npmignore
+.travis.yml
+node_modules
