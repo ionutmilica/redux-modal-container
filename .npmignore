@@ -1,5 +1,6 @@
 .idea
 config
+coverage
 .babelrc
 .eslintrc.js
 .npmignore

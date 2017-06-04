@@ -14,6 +14,8 @@
     "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/redux-modal-container.js --config config/webpack.dev.js",
     "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/redux-modal-container.min.js --config config/webpack.prod.js",
     "lint": "eslint src",
+    "test": "NODE_ENV=test jest --config config/jest.config.js",
+    "test:watch": "npm run test -- --watch --bail",
     "clean": "rimraf dist lib es"
   },
   "devDependencies": {
@@ -37,6 +39,7 @@
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
+    "jest": "^20.0.4",
     "rimraf": "^2.6.1",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5",
