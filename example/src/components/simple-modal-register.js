@@ -2,10 +2,10 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import constants from '../constants';
 
-export default class SimpleModal extends React.Component {
+export default class SimpleModalRegister extends React.Component {
 
   triggerNewModal = () => {
-    this.props.showModal(constants.REGISTER_MODAL, SimpleModal);
+    this.props.showModal(constants.LOGIN_MODAL);
   };
 
   render() {
@@ -13,10 +13,11 @@ export default class SimpleModal extends React.Component {
 
     return (
       <Modal isOpen={true}>
-        <ModalHeader>Access forbidden</ModalHeader>
+        <ModalHeader>Account created</ModalHeader>
         <ModalBody>
           <ModalBody>
-            Your account is disabled. You cannot enter.
+            Your account has been successfully created. <br />
+            <button onClick={this.triggerNewModal}>Open login modal</button>
           </ModalBody>
         </ModalBody>
         <ModalFooter>

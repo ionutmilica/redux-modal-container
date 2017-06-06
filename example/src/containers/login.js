@@ -1,14 +1,13 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { showModal } from 'redux-modal-container';
-import SimpleModal from '../components/simple-modal';
-
+import constants from '../constants';
 
 class Login extends React.Component {
 
   submit = () => {
-    const { triggerModal } = this.props;
-    triggerModal('login-modal', SimpleModal);
+    this.props.showModal(constants.LOGIN_MODAL);
   };
 
   render() {
@@ -33,10 +32,7 @@ class Login extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    triggerModal: (name, component, params = {}) => dispatch(showModal(name, component, params)),
-  };
-};
-
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(
+  null,
+  dispatch => bindActionCreators({ showModal }, dispatch),
+)(Login);

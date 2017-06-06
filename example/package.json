@@ -13,6 +13,7 @@
     "start": "webpack-dev-server --colors --content-base ./public --hot --inline"
   },
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "bootstrap": "4.0.0-alpha.6",
     "css-loader": "^0.28.4",
     "react": "^15.5.4",

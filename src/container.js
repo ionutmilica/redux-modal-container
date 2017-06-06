@@ -4,15 +4,19 @@ import { connect } from 'react-redux';
 import * as modalActionCreators from './actions';
 
 class ModalContainer extends React.Component {
+  static defaultProps = {
+    modals: {},
+  };
 
   render() {
-    const { currentModal, showModal, hideModal } = this.props;
+    const { showModal, hideModal, modals, currentModals } = this.props;
 
-    if (!currentModal) {
+    if (currentModals.length < 1) {
       return null;
     }
 
-    const { component: Component, id, props } = currentModal;
+    const { id, props } = currentModals[0];
+    const Component = modals[id];
 
     return (
       <Component
@@ -25,6 +29,6 @@ class ModalContainer extends React.Component {
 }
 
 export default connect(
-  state => ({ currentModal: state.modals.current }),
+  state => ({ currentModals: state.modals.collection }),
   dispatch => bindActionCreators(modalActionCreators, dispatch),
 )(ModalContainer);
