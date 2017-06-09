@@ -3,7 +3,6 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import constants from '../constants';
 
 export default class SimpleModal extends React.Component {
-
   triggerNewModal = () => {
     this.props.showModal(constants.REGISTER_MODAL, SimpleModal);
   };
@@ -12,7 +11,7 @@ export default class SimpleModal extends React.Component {
     const { hideModal } = this.props;
 
     return (
-      <Modal isOpen={true}>
+      <Modal isOpen>
         <ModalHeader>Access forbidden</ModalHeader>
         <ModalBody>
           <ModalBody>

@@ -10,7 +10,10 @@ export default function modalsReducer(state = initialState, action) {
       return {
         ...state,
         collection: [
-          action,
+          {
+            id: action.id,
+            props: action.props,
+          },
           ...state.collection.filter(item => item.id !== action.id),
         ],
       };
@@ -18,7 +21,7 @@ export default function modalsReducer(state = initialState, action) {
     case MODAL_HIDE:
       return {
         ...state,
-        collection: state.collection.slice(1),
+        collection: state.collection.filter(item => item.id !== action.id),
       };
 
     default:

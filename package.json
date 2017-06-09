@@ -14,10 +14,11 @@
     "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/redux-modal-container.js --config config/webpack.dev.js",
     "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/redux-modal-container.min.js --config config/webpack.prod.js",
     "lint": "eslint src",
-    "test": "NODE_ENV=test jest --config config/jest.config.js",
+    "test": "cross-env NODE_ENV=test jest --config config/jest.config.js",
     "test:coverage": "npm run test -- --coverage",
-    "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "test:watch": "npm run test -- --watch --bail",
+    "prettier": "prettier --write --semi --single-quote --trailing-comma=all 'src/**/*.js'",
     "clean": "rimraf dist lib es"
   },
   "devDependencies": {
@@ -49,6 +50,8 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "coveralls": "^2.13.1",
+    "prettier": "^1.4.4",
     "react": "^15.5.4",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0"

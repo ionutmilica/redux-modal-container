@@ -5,7 +5,6 @@ import { showModal } from 'redux-modal-container';
 import constants from '../constants';
 
 class Login extends React.Component {
-
   submit = () => {
     this.props.showModal(constants.LOGIN_MODAL);
   };
@@ -18,11 +17,11 @@ class Login extends React.Component {
           <form>
             <div>
               <label>Username: </label>
-              <input type="text" name="username"/>
+              <input type="text" name="username" />
             </div>
             <div>
               <label>Password: </label>
-              <input type="text" name="username"/>
+              <input type="text" name="username" />
             </div>
             <button type="button" onClick={this.submit}>Login</button>
           </form>
@@ -32,7 +31,6 @@ class Login extends React.Component {
   }
 }
 
-export default connect(
-  null,
-  dispatch => bindActionCreators({ showModal }, dispatch),
+export default connect(null, dispatch =>
+  bindActionCreators({ showModal }, dispatch),
 )(Login);

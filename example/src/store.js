@@ -16,10 +16,7 @@ const rootReducer = combineReducers({
 const store = createStore(
   rootReducer,
   {},
-  compose(
-    applyMiddleware(logger),
-    devToolsMiddleware(),
-  )
+  compose(applyMiddleware(logger), devToolsMiddleware()),
 );
 
 export default store;

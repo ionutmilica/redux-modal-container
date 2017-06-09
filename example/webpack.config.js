@@ -9,13 +9,13 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new HTMLWebpackPlugin({
       template: __dirname + '/public/index.html',
       filename: 'index.html',
-      inject: 'body'
+      inject: 'body',
     }),
   ],
   module: {
@@ -23,16 +23,16 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        include: [ __dirname, libSrc ],
-        loader: 'babel-loader'
+        include: [__dirname, libSrc],
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   resolve: {
-    alias: { 'redux-modal-container': libSrc }
-  }
+    alias: { 'redux-modal-container': libSrc },
+  },
 };
