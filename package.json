@@ -1,12 +1,24 @@
 {
   "name": "redux-modal-container",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Manage modals in applications that are using react and redux.",
   "author": "Ionut Milica",
+  "keywords": [
+    "react",
+    "redux",
+    "modal",
+    "container",
+    "modals"
+  ],
+  "homepage": "https://github.com/ionutmilica/redux-modal-container",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "jsnext:main": "./es/index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionutmilica/redux-modal-container.git"
+  },
   "scripts": {
     "build": "npm run build:lib && npm run build:es && npm run build:umd && npm run build:umd:min",
     "build:lib": "babel src --out-dir lib --ignore __tests__",
