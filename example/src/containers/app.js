@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container as ModalContainer } from 'redux-modal-container';
+import 'bootstrap/dist/css/bootstrap.css';
 import Login from './login';
 import Register from './register';
 import constants from '../constants';
 import SimpleModal from '../components/simple-modal';
 import SimpleModalRegister from '../components/simple-modal-register';
-import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () =>
   <div>

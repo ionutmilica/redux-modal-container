@@ -1,6 +1,7 @@
 ## Redux-Modal-Container
 [![Build Status](https://travis-ci.org/ionutmilica/redux-modal-container.svg?branch=master)](https://travis-ci.org/ionutmilica/redux-modal-container)
 [![redux-modal-container](https://img.shields.io/npm/v/redux-modal-container.svg)](https://www.npmjs.com/package/redux-modal-container)
+[![codecov](https://codecov.io/gh/ionutmilica/redux-modal-container/branch/master/graph/badge.svg)](https://codecov.io/gh/ionutmilica/redux-modal-container)
 
 This library provides an easy way to show and hide modals when working with Redux.
 

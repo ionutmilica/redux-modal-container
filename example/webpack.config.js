@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const libSrc = path.resolve(__dirname, '../src');
@@ -13,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: __dirname + '/public/index.html',
+      template: path.join(__dirname, 'public/index.html'),
       filename: 'index.html',
       inject: 'body',
     }),
@@ -33,6 +32,11 @@ module.exports = {
     ],
   },
   resolve: {
-    alias: { 'redux-modal-container': libSrc },
+    alias: {
+      'redux-modal-container': libSrc,
+      react: path.join(__dirname, 'node_modules', 'react'),
+      redux: path.join(__dirname, 'node_modules', 'redux'),
+      'react-redux': path.join(__dirname, 'node_modules', 'react-redux'),
+    },
   },
 };
