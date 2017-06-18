@@ -1,11 +1,3 @@
-import modalReducer from './reducer';
-import Container from './container';
-import { showModal, hideModal, removeModal } from './actions';
-
-export default {
-  Container,
-  modalReducer,
-  showModal,
-  hideModal,
-  removeModal,
-};
+export { default as modalReducer } from './reducer';
+export { default as Container } from './container';
+export { showModal, hideModal } from './actions';
