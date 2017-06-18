@@ -1,6 +1,6 @@
 {
   "name": "redux-modal-container",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Manage modals in applications that are using react and redux.",
   "author": "Ionut Milica",
   "keywords": [
