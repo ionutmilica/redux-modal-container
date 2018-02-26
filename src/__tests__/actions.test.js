@@ -9,7 +9,9 @@ describe('actions', () => {
         id: 'modal',
         props: { a: 1, b: 2 },
       };
-      expect(actions.showModal('modal', { a: 1, b: 2 })).toEqual(expectedAction);
+      expect(actions.showModal('modal', { a: 1, b: 2 })).toEqual(
+        expectedAction,
+      );
     });
   });
 

@@ -20,8 +20,12 @@ export default class SimpleModalRegister extends React.Component {
           </ModalBody>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={this.triggerNewModal}>Ok</Button>{' '}
-          <Button color="secondary" onClick={hideModal}>Cancel</Button>
+          <Button color="primary" onClick={this.triggerNewModal}>
+            Ok
+          </Button>{' '}
+          <Button color="secondary" onClick={hideModal}>
+            Cancel
+          </Button>
         </ModalFooter>
       </Modal>
     );

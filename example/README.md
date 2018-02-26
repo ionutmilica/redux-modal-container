@@ -2,11 +2,11 @@
 
 Installation:
 ```bash
-yarn install
+yarn
 ```
 
-Usage:
+Starting a dev server:
 ```bash
 yarn start 
-# Open http://localhost:8080/ to see the demo
 ```
+After that you can open `http://localhost:8080/` to see the demo.
