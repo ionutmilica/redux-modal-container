@@ -26,7 +26,7 @@ import { Container as ModalContainer } from 'redux-modal-container';
 // ...
 render(
   <Provider store={yourStore}>
-    <Container 
+    <ModalContainer 
       modals={{
         simple: () => <div>Modal 1</div>,
       }}
